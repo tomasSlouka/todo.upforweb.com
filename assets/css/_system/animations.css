@@ -1,0 +1,79 @@
+.layout-enter-active, .layout-leave-active {
+    transition: opacity 0.5s;
+}
+.layout-enter, .layout-leave-active {
+    opacity: 0;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity 0.5s;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+
+
+.fade-enter{
+    opacity: 0;
+}
+.fade-enter-active{
+    transition: opacity 1s;
+}
+.fade-leave{
+    opacity: 1;
+}
+.fade-leave-active{
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+
+
+/* TAB TEXT */
+.tab-enter {
+    opacity: 0;
+    transform: translateY(150px);
+}
+.tab-enter-active {
+    transition: all 400ms ease-out;
+}
+.tab-enter-to {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+.tab-leave {
+    opacity: 1;
+}
+.tab-leave-active {
+    transition: all 600ms ease-in;
+}
+.tab-leave-to {
+    opacity: 0;
+}
+
+/* TAB IMAGE */
+.tab-img-enter {
+    opacity: 0;
+    transform: translateX(-150px);
+}
+.tab-img-enter-active {
+    transition: all 400ms ease-out;
+}
+.tab-img-enter-to {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.tab-img-leave {
+    opacity: 1;
+}
+.tab-img-leave-active {
+    transition: all 400ms ease-in;
+}
+.tab-img-leave-to {
+    opacity: 0;
+}
+

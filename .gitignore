@@ -1,0 +1,19 @@
+# dependencies
+# node_modules
+
+# logs
+npm-debug.log
+yarn-error.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+/dist
+
+.serverless
+
+.env
+
+.DS_STORE
+node_modules
