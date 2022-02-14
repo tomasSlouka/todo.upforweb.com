@@ -120,7 +120,7 @@ button.black:hover, .button.black:hover {
     color: #fff;
 }
 button.black.ghost:hover, .button.black.ghost:hover {
-    opacity: 50%;
+    opacity: .5;
 }
 button.red:hover, .button.red:hover {
     background: #d73a4a;
