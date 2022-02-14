@@ -112,7 +112,7 @@ button.black, .button.black {
     text-decoration: none;
 }
 button.black.ghost, .button.black.ghost {
-    opacity: 50%;
+    opacity: .5;
 }
 button.black:hover, .button.black:hover {
     background: #333;
