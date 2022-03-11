@@ -2,9 +2,9 @@
     <div class='component'>
         <div class='container'>
 
-            <div class="grid gap-40 col-2 auto">
-                <div>
-                    <form class="grid col-2 auto gap-5"
+            <div class="grid gap-40 md-col-2 auto">
+                <div class='grid gap-40 align-content-start'>
+                    <form class="grid md-col-2 auto gap-5"
                         @submit.prevent="addItem()" 
                         @keyup="checkItem()"
                         @keydown.esc="clearItem()"
@@ -14,25 +14,25 @@
                             <input type="text" name="item" placeholder="Search or Add..." autocomplete="off" v-model="item">
                             <span class='clear-input absolute-right' :class="item ? 'show' : ''" @click="clearItem()">clear</span>
                         </div>
-                        <button type="submit" class="black" :class="submitButtonClass">Pridať</button>
+                        <button type="submit" class="black" :class="submitButtonClass">Add</button>
                     </form>
-                </div>
 
-                <div></div>
+                    <!-- <div></div> -->
 
-                <div class="list grid gap-2 align-content-start" v-if='list.length > 0'>
-                    <div class="row grid col-2 auto gap-20 justify-content-space-between align-items-center" v-for="(item, index) in list" :key="index">
-                        <div>
-                            <p>{{item.text}}</p>
-                            <p class="font12 gray">#{{ item.id }}</p>
+                    <div class="list grid gap-2 align-content-start" v-if='list.length > 0'>
+                        <div class="row grid col-2 auto gap-20 justify-content-space-between align-items-center" v-for="(item, index) in list" :key="index">
+                            <div>
+                                <p>{{item.text}}</p>
+                                <p class="font12 gray">#{{ item.id }}</p>
+                            </div>
+                            <div class="grid justify-items-end font12 time">{{ item.date_added | formatTime }}</div>
+                            <div class="grid justify-items-end font12 delete hidden"><button class="red small" @click="removeItem(index)">Remove</button></div>
                         </div>
-                        <div class="grid justify-items-end font12 time">{{ item.date_added | formatTime }}</div>
-                        <div class="grid justify-items-end font12 delete hidden"><button class="red small" @click="removeItem(index)">Remove</button></div>
                     </div>
-                </div>
 
-                <div v-else>
-                    <div class="box">Nothing to show.</div>
+                    <div v-else>
+                        <div class="box">Nothing to show.</div>
+                    </div>
                 </div>
 
                 <div class='grid gap-40'>
